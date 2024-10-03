@@ -67,15 +67,15 @@ public class DLL<T> {
     public void removeBetween(T e1, T e2) {
 	    
           // First, find the nodes corresponding to e1 and e2
- Node <T > p = head ;
-while (( p != nu l l ) && (! p.data.equals(e1)))
-p=p.next ;
+ Node <T> p = head;
+while (( p!= null ) && (!p.data.equals(e1)))
+p=p.next;
 if( p == null )
 return;
-Node<T> q = p.next ;
-while (( q != null) && (!q.data.equals( e2 ) ) )
+Node<T> q = p.next;
+while((q!= null) && (!q.data.equals( e2 )))
 q=q.next;
-if( q == nu l l )
+if( q == null )
 return;
 p.next = q ;
 q.previous = p ;
