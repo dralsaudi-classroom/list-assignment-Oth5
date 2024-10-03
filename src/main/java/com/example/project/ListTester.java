@@ -10,7 +10,7 @@ list.remove();
         while(list.findnext()!=null){
 list.findnext();
         }
-            list.insert(tmp)
+            list.insert(tmp);
                 }
         // Write the method circularLeftShift, user of List ADT, that takes as input a non-empty
         // List list and an integer n > 0 and performs n circular left shift of the list.
