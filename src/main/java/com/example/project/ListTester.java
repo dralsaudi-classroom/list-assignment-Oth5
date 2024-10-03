@@ -5,8 +5,8 @@ public class ListTester {
     {
         for(int i=0;i<n;i++){
         list.findfirst();
-     T tmp = list.retrieve () ;
-list . remove () ;
+     T tmp = list.retrieve();
+list.remove();
         while(list.findnext()!=null){
 list.findnext();
         }
@@ -19,15 +19,15 @@ list.findnext();
     }
     public static <T> void reverseCopy(DLL<T> l1, DLL<T> l2)
     {
-       if(l1.empty () )
+       if(l1.empty())
 return;
-while(!l1.last () )
-l1.findNext () ;
-while(!l1.first () ) {
-l2.insert (l1.retrieve () ) ;
-l1.findPrevious () ;
+while(!l1.last())
+l1.findNext();
+while(!l1.first()) {
+l2.insert(l1.retrieve()) ;
+l1.findPrevious();
 }
-l2.insert(l1.retrieve () ) ;
+l2.insert(l1.retrieve()) ;
     }
         // Write the method reverseCopy, user of DoubleLinkedList, which copies the elements
         // of l1 to l2 in reverse order. The list l1 must not change. Assume that l2 is empty.
@@ -35,5 +35,5 @@ l2.insert(l1.retrieve () ) ;
         // DoubleLinkedList<T> l2).
         // Example 4.1. If l1 : A ↔ B ↔ C ↔ D, then calling reverseCopy(l1, l2) results in
         // l2 : D ↔ C ↔ B ↔ A.
-    }
+    
 }
