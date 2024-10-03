@@ -67,32 +67,29 @@ public class DLL<T> {
     public void removeBetween(T e1, T e2) {
 	    
           // First, find the nodes corresponding to e1 and e2
-    DLLNode<T> nodeE1 = null;
-    DLLNode<T> nodeE2 = null;
+ Node <T > p = head ;
+while (( p != nu l l ) && (! p.data.equals(e1)))
+p=p.next ;
+if( p == null )
+return;
+Node<T> q = p.next ;
+while (( q != null) && (!q.data.equals( e2 ) ) )
+q=q.next;
+if( q == nu l l )
+return;
+p.next = q ;
+q.previous = p ;
+current=head ;
+}
 
-    current = head;
-    while (current != null) {
-        if (current.data.equals(e1)) {
-            nodeE1 = current;
-        } else if (currentNode.data.equals(e2)) {
-            nodeE2 = current;
-        }
-        current = current.next;
-    }
 
     // If either e1 or e2 doesn't exist, do nothing
-    if (nodeE1 == null || nodeE2 == null) {
-        return;
-    }
+ 
 
     // Adjust the pointers to remove the elements between e1 and e2
-    if (nodeE1.next != nodeE2) {
-        nodeE1.next = nodeE2;
-        nodeE2.previous = nodeE1;
-    }
+  
 
     // Move current to head if the removal is successful
-    current = head;
-}
+
     }
 }
