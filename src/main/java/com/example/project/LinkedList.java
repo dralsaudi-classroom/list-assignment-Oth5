@@ -54,26 +54,33 @@ public class LinkedList<T> implements List<T>{
             current = current.next;
         }
     }
-    public T mostFrequentElement() {
-	   T mfe = null;
-int max = 0;
-Node<T> p = head ;
-while(p != null) {
-Node <T> q = p ;
-int count = 0;
-while ( q != null ) {
-if ( q.data.equals(p.data))
-count++;
-q=q.next ;
+   public T mostFrequentElement() {
+    T mfe = null;
+    int max = 0;
+    Node<T> p = head;
+
+    while (p != null) {
+        Node<T> q = head;
+        int count = 0;
+
+        while (q != null) {
+            if (q.data.equals(p.data)) {
+                count++;
+            }
+            q = q.next;
+        }
+
+        if (count > max) {
+            max = count;
+            mfe = p.data;
+        }
+
+        p = p.next;
+    }
+
+    return mfe;
 }
-if(count > max ) {
-max = count ;
-mfe = p.data ;
-}
-p = p.next ;
-}
-return mfe ;
-	    }
+
         //         Write the method mostFrequentElement, member of the class LinkedList, that returns
 	    
         // the most frequent element in the list. The most frequent element is the element
@@ -82,4 +89,4 @@ return mfe ;
         // Example 1.1. Given the list l : A, B, C, B, C, D, E, mostFrequentElement() returns
         // B.
     }
-}
+
