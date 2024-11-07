@@ -66,41 +66,26 @@ public class DLL<T> {
     }
   public void removeBetween(T e1, T e2) {
     Node<T> p = head;
-    
-    // Find the first node containing e1
-    while (p != null && !p.data.equals(e1)) {
+        while (p != null && !p.data.equals(e1)) {
         p = p.next;
     }
-    
-    // If e1 is not found, return
-    if (p == null) {
+        if (p == null) {
         return;
     }
     
     Node<T> q = p.next;
-    
-    // Find the first node containing e2 after e1
-    while (q != null && !q.data.equals(e2)) {
+        while (q != null && !q.data.equals(e2)) {
         q = q.next;
     }
-    
-    // If e2 is not found, return
-    if (q == null) {
+        if (q == null) {
         return;
     }
-    
-    // Connect p to q, effectively removing nodes between them
-    p.next = q;
+        p.next = q;
     if (q != null) {
         q.previous = p;
     }
     
-    // Reset current pointer, if necessary
     current = head;
-}
-
-}
-
 
     // If either e1 or e2 doesn't exist, do nothing
  
@@ -109,6 +94,6 @@ public class DLL<T> {
   
 
     // Move current to head if the removal is successful
-
+  }
     }
 
