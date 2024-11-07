@@ -79,7 +79,7 @@ public class LinkedList<T> implements List<T>{
     }
 
     return mfe;
-}
+
 
         //         Write the method mostFrequentElement, member of the class LinkedList, that returns
 	    
@@ -88,5 +88,6 @@ public class LinkedList<T> implements List<T>{
         // number of times, the one encountered earlier is returned.
         // Example 1.1. Given the list l : A, B, C, B, C, D, E, mostFrequentElement() returns
         // B.
+   }
     }
 
